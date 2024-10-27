@@ -1,0 +1,29 @@
+---
+import Link from "@/assets/icons/Link.astro";
+
+interface Props {
+  pathImage?: string;
+  minHeight: string;
+  href: string;
+  target?: string;
+  rel?: string;
+}
+
+const { pathImage, minHeight, href, ...props } = Astro.props;
+---
+
+<a
+  class={`w-full flex flex-col rounded-3xl min-h-[${minHeight}] bg-cover bg-center overflow-hidden `}
+  style={`background-image: url(${pathImage})`}
+  href={href}
+  {...props}
+>
+  <div
+    class="w-full h-full pb-8 flex flex-col justify-end items-center bg-[rgba(17,17,17,0.4)] hover:bg-[rgba(17,17,17,0.2)] ease-in-out duration-300 transition-all"
+  >
+    <div id="linkHover" class="w-full h-full flex justify-end display-none p-4">
+      <Link />
+    </div>
+    <slot />
+  </div>
+</a>

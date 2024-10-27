@@ -1,0 +1,144 @@
+---
+import ButtonLink from "@/components/ButtonLink.astro";
+---
+
+<section id="services" class="flex flex-col gap-10">
+  <!-- SUNDAY -->
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 w-full bg-secondary overflow-hidden rounded-[3rem] min-h-[10vh] relative"
+  >
+    <!-- IMAGE -->
+    <div class="w-full h-full">
+      <img
+        class="w-full h-full object-cover"
+        src="/public/images/services.jpg"
+        alt="Reunion de domingo"
+        title=""
+      />
+    </div>
+    <!-- INFO -->
+    <!-- PY Y GAP -->
+    <div
+      class="w-full flex flex-col justify-center pt-0 pb-16 sm:pb-28 md:py-16 lg:py-16 xl:py-24 gap-4 sm:gap-8 md:gap-4 lg:gap-5 xl:gap-10 text-center"
+    >
+      <div
+        class="bg-white flex justify-center items-center w-full py-5 text-center"
+      >
+        <!-- ACOMPAÑANOS -->
+        <p
+          class="uppercase text-secondary text-xl sm:text-4xl md:text-xl lg:text-2xl xl:text-3xl"
+        >
+          <span class="font-semibold">Acompañanos</span> en nuestro
+        </p>
+      </div>
+      <div class="flex justify-center items-center w-full py-5">
+        <!-- SERVICIO -->
+        <p
+          class="uppercase text-[2.5rem] sm:text-7xl md:text-4xl lg:text-5xl xl:text-[4.1rem] font-semibold"
+        >
+          servicio de
+        </p>
+      </div>
+      <!-- MARGEN TOP DOMINGO -->
+      <div
+        class="flex justify-center items-center w-full -mt-6 sm:-mt-5 md:-mt-5 lg:-mt-4 xl:-mt-8"
+      >
+        <!-- TEXT DOMINGO -->
+        <p
+          class="font-medium tracking-wider text-[6.7rem] sm:text-[12rem] md:text-8xl lg:text-9xl xl:text-[11rem] house"
+        >
+          domingo
+        </p>
+      </div>
+      <!-- TEXT HORA Y PADDING -->
+      <div
+        class="flex flex-col justify-center items-center w-full pt-20 sm:pt-40 md:pt-20 lg:pt-28 tracking-wider font-extralight text-2xl sm:text-4xl md:text-xl lg:text-3xl xl:text-4xl px-2 text-center"
+      >
+        <p>¡Te esperamos todos los</p>
+        <p>domingos a las <span class="font-bold">10:30 am</span>!</p>
+      </div>
+    </div>
+  </div>
+  <!-- UBICATION -->
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 w-full overflow-hidden rounded-[3rem] min-h-[10vh] relative"
+  >
+    <div
+      class="w-full flex flex-col justify-center items-center gap-10 bg-[#2A2B27] order-2 md:order-1 py-10 md:py-14 lg:py-16 xl:py-20 px-10"
+    >
+      <div class="flex justify-center items-center w-full text-center">
+        <p
+          class="uppercase text-white text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold"
+        >
+          UBICACIÓN
+        </p>
+      </div>
+      <p class="text-neutral-400 text-lg lg:text-xl xl:text-2xl text-center">
+        Carretera Libramiento a Tampico Kilómetro 3, Unión Chacón, 42083 Unión
+        Chacón, Hgo.
+      </p>
+      <ButtonLink
+        href="https://maps.app.goo.gl/hpe5zxacNRc9hxKa6"
+        type="outline"
+        target="_blank"
+        rel="noopener noreferrer">GOOGLE MAPS</ButtonLink
+      >
+    </div>
+    <div class="w-full h-60 md:h-full order-1 md:order-2">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3747.242162626631!2d-98.73707398906089!3d20.08216144656117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x85d10a751862a4f5%3A0x5275591180e55d38!2sCarretera%20Libramiento%20a%20Tampico%20Kil%C3%B3metro%203%2C%20Uni%C3%B3n%20Chac%C3%B3n%2C%2042083%20Uni%C3%B3n%20Chac%C3%B3n%2C%20Hgo.!3m2!1d20.0833333!2d-98.7338889!5e0!3m2!1ses-419!2smx!4v1729740030460!5m2!1ses-419!2smx"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .house {
+    font-family: "Restrike";
+    line-height: 0;
+    text-shadow:
+      -4px -5px 0 #555347,
+      2px -5px 0 #555347,
+      9px -5px 0 #555347; /* Crea el borde alrededor del texto */
+  }
+
+  /* Media query para pantallas de 768px o más */
+  @media (max-width: 1024px) {
+    .house {
+      font-family: "Restrike";
+      line-height: 0;
+      text-shadow:
+        -3px -4px 0 #555347,
+        1px -4px 0 #555347,
+        7px -4px 0 #555347; /* Crea el borde alrededor del texto */
+    }
+  }
+
+  /* Media query para pantallas de 768px o más */
+  @media (max-width: 768px) {
+    .house {
+      font-family: "Restrike";
+      line-height: 0;
+      text-shadow:
+        -4px -5px 0 #555347,
+        2px -5px 0 #555347,
+        9px -5px 0 #555347; /* Crea el borde alrededor del texto */
+    }
+  }
+
+  @media (max-width: 640px) {
+    .house {
+      font-family: "Restrike";
+      line-height: 0;
+      text-shadow:
+        -3px -3px 0 #555347,
+        2px -3px 0 #555347,
+        6px -3px 0 #555347; /* Crea el borde alrededor del texto */
+    }
+  }
+</style>

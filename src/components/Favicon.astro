@@ -1,0 +1,11 @@
+---
+const { isDarkMode } = Astro.props;
+---
+
+<link
+  rel="icon"
+  href={isDarkMode
+    ? "../../public/favicons/logo_white.png"
+    : "../../public/favicons/logo_blak.png"}
+  type="image/png"
+/>

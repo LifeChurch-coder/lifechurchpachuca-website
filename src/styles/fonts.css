@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/Lora/static/Lora-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Restrike";
+  src: url("/fonts/Restrike/Restrike.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+@font-face {
+  font-family: "biennale";
+  src: url("/fonts/biennale/BiennaleRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tunga";
+  src: url("/fonts/tunga/tungab.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Graphik";
+  src: url("/fonts/graphik/Graphik-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+*/

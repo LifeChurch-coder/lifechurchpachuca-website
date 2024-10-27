@@ -1,0 +1,86 @@
+---
+import TitleSection from "@/components/TitleSection.astro";
+import CardImage from "@/components/CardImage.astro";
+import ButtonLink from "@/components/ButtonLink.astro";
+import Card from "@/components/Card.astro";
+
+const pathImage = "../../public/images/conecta.jpg";
+---
+
+<section id="conecta" class="flex flex-col pt-16 gap-10">
+  <TitleSection title="Conecta" />
+  <CardImage pathImage={pathImage} minHeight="200px" href="/donativos">
+    <div
+      class="w-full text-center md:font-extralight h-full flex flex-col justify-end items-center pt-8 pb-4 px-6 gap-8"
+    >
+      <p
+        class="tracking-wider text-base sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl"
+      >
+        Y Dios proveerá con generocidad <span>todo lo que necesiten</span>.
+        Entonces siempre tendrán todo lo necesario y habrá bastante de sobra
+        para compartit con otros.
+      </p>
+      <p
+        class="font-black text-xl sm:text-xl md:text-5xl lg:text-5xl xl:text-6xl"
+      >
+        2 Corintios 9:8
+      </p>
+    </div>
+  </CardImage>
+  <div class="w-full grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-10 pt-8">
+    <Card backgroundColor="bg-tertiary" minHeight="200px">
+      <p
+        class="uppercase text-4xl sm:text-6xl md:text-4xl lg:text-6xl xl:text-6xl text-neutral-950"
+      >
+        ¿Podemos <span class="font-bold block">orar por ti?</span>
+      </p>
+      <p
+        class="uppercase font-normal text-base sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl text-neutral-950 pt-14"
+      >
+        Escribe aquí tu petición de oración:
+      </p>
+      <div class="flex flex-col gap-3 pt-4">
+        <input
+          type="text"
+          placeholder="Nombre"
+          class="w-full h-8 border-2 border-neutral-300 rounded-lg p-4 text-neutral-800"
+        />
+        <textarea
+          rows="5"
+          placeholder="Petición de oración"
+          class="w-full border-2 border-neutral-300 rounded-lg p-4 text-neutral-800"
+        ></textarea>
+      </div>
+      <div class="w-full h-[8rem] flex items-end justify-end">
+        <button
+          class="font-medium bg-neutral-800 uppercase text-base py-4 px-5 sm:font-semibold sm:py-4 sm:px-6 md:text-lg rounded-3xl relative overflow-hidden"
+        >
+          <p>ENVIAR</p>
+        </button>
+      </div>
+    </Card>
+    <Card backgroundColor="bg-secondary" minHeight="200px">
+      <div class="h-full flex flex-col justify-between min-h-96">
+        <div>
+          <p
+            class="uppercase text-4xl sm:text-6xl md:text-4xl lg:text-6xl xl:text-6xl text-neutral-950"
+          >
+            Conecta con <span class="font-bold block">nosotros</span>
+          </p>
+          <p
+            class="text-xl sm:text-2xl md:text-xl lg:text-2xl xl:text-3xl pt-14"
+          >
+            ¿Tienes alguna pregunta o necesitas contactar a alguien?
+          </p>
+        </div>
+        <div class="w-full flex items-end justify-end bottom-0">
+          <button
+            class="font-medium bg-tertiary text-secondary uppercase text-base py-4 px-5 sm:font-semibold sm:py-4 sm:px-6 md:text-lg rounded-3xl relative overflow-hidden"
+          >
+            <p>Contáctanos</p>
+          </button>
+        </div>
+      </div>
+    </Card>
+  </div>
+</section>

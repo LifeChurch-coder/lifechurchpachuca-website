@@ -1,0 +1,33 @@
+---
+import "@fontsource/anton";
+import TitleSection from "@/components/TitleSection.astro";
+import CardImage from "@/components/CardImage.astro";
+
+const pathImage = "../../public/images/casa.jpg";
+---
+
+<section id="conocenos" class="flex flex-col pt-16 gap-10">
+  <TitleSection title="Conoce más" />
+  <CardImage pathImage={pathImage} minHeight="200px" href="/donativos">
+    <div class="flex w-full justify-center mt-8">
+      <p
+        class="uppercase font-light tracking-wider text-base sm:text-xl md:text-4xl lg:text-4xl xl:text-5xl"
+      >
+        Construyendo la
+      </p>
+    </div>
+    <div class="flex w-full justify-center -mt-5">
+      <p
+        class="-translate-x-[10%] uppercase roboto tracking-wider font-extralight italic text-[5.6rem] sm:text-[8.5rem] md:text-[12.5rem] lg:text-[14.5rem] xl:text-[15rem]"
+      >
+        Casa
+      </p>
+    </div>
+  </CardImage>
+</section>
+
+<style>
+  .roboto {
+    font-family: "Anton", sans-serif;
+  }
+</style>

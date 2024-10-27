@@ -1,0 +1,14 @@
+---
+interface Props {
+  backgroundColor: string;
+  minHeight: string;
+}
+
+const { backgroundColor, minHeight } = Astro.props;
+---
+
+<div
+  class=`w-full rounded-3xl min-h-[${minHeight}] ${backgroundColor || 'bg-neutral-900'} bg-cover bg-center overflow-hidden p-10`
+>
+  <slot />
+</div>
