@@ -1,11 +1,26 @@
 ---
+/* Home Page */
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/sections/Hero.astro";
+import Vision from "@/sections/Vision.astro";
+import Services from "@/sections/Services.astro";
+import Conferences from "@/sections/Conferences.astro";
+import Ministries from "@/sections/Ministries.astro";
+import Connects from "@/sections/Connects.astro";
+
+import Footer from "@/components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Life Church - Bienvenido a Casa">
   <Hero />
-  <main>
-    <div class="h-96"></div>
-  </main>
+  <div class="flex justify-center w-full pt-24 md:pt-32">
+    <div class="flex flex-col gap-10 w-full max-w-7xl h-[800px] px-4">
+      <Vision />
+      <Services />
+      <Conferences />
+      <Ministries />
+      <Connects />
+      <Footer />
+    </div>
+  </div>
 </Layout>

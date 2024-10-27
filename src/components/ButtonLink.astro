@@ -1,0 +1,30 @@
+---
+interface Props {
+  href: string;
+  type: "outline" | "contained" | "text";
+  target?: string;
+  rel?: string;
+}
+
+const { href, type, ...props } = Astro.props;
+
+const colorStyle = type === "text" ? "" : "border-2 border-primary";
+const fontStyle = type === "contained" ? "bg-primary text-neutral-900" : "";
+const hoverButton =
+  type === "outline"
+    ? "ease-in-out border border-white hover:bg-white hover:text-neutral-800 transition-all duration-700"
+    : "";
+---
+
+<a
+  href={href}
+  class={[
+    "font-medium uppercase text-base py-4 px-5 sm:font-semibold sm:py-4 sm:px-6 md:text-lg rounded-3xl relative overflow-hidden",
+    colorStyle,
+    fontStyle,
+    hoverButton,
+  ].join(" ")}
+  {...props}
+>
+  <slot />
+</a>

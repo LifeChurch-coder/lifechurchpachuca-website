@@ -1,16 +1,54 @@
-<section>
+---
+import "@/styles/global.css";
+import ButtonLink from "@/components/ButtonLink.astro";
+
+// IMAGE BACKGROUND
+const heroImage = "../../public/images/hero.jpg";
+---
+
+<section id="hero">
   <div
-    class="w-full h-[100vh] bg-[url('../../public/images/hero_img.jpg')] bg-cover bg-center bg-no-repeat"
+    class=`w-full h-[100vh] bg-cover bg-center bg-no-repeat`
+    style=`background-image: url(${heroImage});`
   >
     <div
-      class="w-full h-full flex flex-col justify-center al items-center bg-gradient-to-b from-transparent via-[rgba(17, 18, 13, 0.5] to-[#11120d]"
+      class="bg-gradient-to-b from-neutral-900/40 to-neutral-900 w-full h-full flex flex-col justify-center items-center"
     >
       <div>
-        <p class="text-8xl font-bold uppercase">Bienvenido a</p>
+        <p
+          class="text-3xl sm:text-5xl md:text-7xl tracking-wider font-bold uppercase"
+        >
+          Bienvenido a
+        </p>
       </div>
-      <div>
-        <p class="text-9xl font-bold uppercase">Casa</p>
+      <div class="pt-6 sm:pt-7 md:pt-10">
+        <p class="house text-[10rem] sm:text-[17rem] md:text-[22rem]">casa</p>
+      </div>
+      <div class="mt-28 sm:mt-40 md:mt-48">
+        <ButtonLink href="#vision" type="outline"
+          ><span class="relative z-10">Conoce más</span></ButtonLink
+        >
       </div>
     </div>
   </div>
 </section>
+
+<!-- styles -->
+
+<style>
+  .bg-gradient {
+    background: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 1) 0%,
+      rgba(17, 17, 17, 0.95) 20%,
+      rgba(17, 17, 17, 0.8) 40%,
+      rgba(17, 17, 17, 0.5) 60%,
+      rgba(17, 17, 17, 0.5) 100%
+    );
+  }
+
+  .house {
+    font-family: "Restrike";
+    line-height: 0;
+  }
+</style>

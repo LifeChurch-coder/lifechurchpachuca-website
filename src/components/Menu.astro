@@ -1,0 +1,261 @@
+---
+import Location from "@/assets/icons/Location.astro";
+
+const menuList = [
+  {
+    label: "Inicio",
+    path: "/",
+    title: "Inicio",
+  },
+  {
+    label: "Se Parte",
+    path: "#conecta",
+    title: "Se Parte",
+  },
+  {
+    label: "series",
+    path: "#mensajes",
+    title: "Series",
+  },
+  {
+    label: "dar",
+    path: "/contacto",
+    title: "Dar",
+  },
+  {
+    label: "cantacto",
+    path: "/contacto",
+    title: "Contacto",
+  },
+];
+---
+
+<nav
+  id="navbar"
+  class="fixed flex flex-col z-50 top-0 left-0 w-full justify-center items-center transition-all duration-500 ease-in-out"
+>
+  <div class="flex justify-between items-center w-full max-w-7xl p-4">
+    <!-- LOGO -->
+    <a href="/" title="Life Church - Inicio">
+      <img
+        src="logos/logoName.png"
+        class="w-24 sm:w-28 md:w-32"
+        alt="Life Church Logo"
+        title="Life Church - Inicio"
+      />
+    </a>
+    <!-- MENU -->
+    <div class="flex flex-row">
+      <!-- LINK UBICACION SM-->
+      <div class="flex mr-2 justify-center items-center md:hidden">
+        <a id="ubicationLink" href="#services" title="Ubicación">
+          <Location />
+        </a>
+      </div>
+      <!-- BURGER BUTTON -->
+      <button
+        id="menuButton"
+        type="button"
+        class="relative group overflow-hidden inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg transform transition-all md:hidden hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-200"
+      >
+        <!-- CONTENT LINES -->
+        <div
+          class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden"
+        >
+          <!-- BURGER LINES -->
+          <div
+            id="line1"
+            class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"
+          >
+          </div>
+          <div
+            id="line2"
+            class="bg-white h-[2px] w-7 rounded transform transition-all duration-300 delay-75"
+          >
+          </div>
+          <div
+            id="line3"
+            class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left delay-150"
+          >
+          </div>
+          <!-- CLOSE LINES -->
+          <div
+            id="contentLines"
+            class="absolute items-center justify-between transform transition-all duration-500 top-2.5 -translate-x-10 flex w-0"
+          >
+            <div
+              id="line4"
+              class="absolute bg-white h-[2px] w-5 transform transition-all duration-500 rotate-0 delay-300"
+            >
+            </div>
+            <div
+              id="line5"
+              class="absolute bg-white h-[2px] w-5 transform transition-all duration-500 -rotate-0 delay-300"
+            >
+            </div>
+          </div>
+        </div>
+      </button>
+      <!-- CONTENT NAVLIST MD -->
+      <div class="hidden w-full md:block md:w-auto" id="menu">
+        <ul
+          class="relative flex flex-col md:flex-row justify-center items-center"
+        >
+          {
+            menuList.map(
+              (item: { label: string; path: string; title: string }) => (
+                <li class="relative">
+                  <a
+                    href={item.path}
+                    class="effect-underline relative mx-4 uppercase hover:text-neutral-300 font-medium"
+                    title={item.title}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ),
+            )
+          }
+          <li class="ml-2">
+            <a href="#services" title="Ubicación">
+              <Location />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- CONTENT NAVLIST SM -->
+  <div
+    class="w-full h-screen hidden transition-all duration-700 md:hidden ease-in-out"
+    id="menuSM"
+  >
+    <ul
+      class="relative w-full h-full flex flex-col justify-start items-center gap-4 pt-10"
+    >
+      {
+        menuList.map((item: { label: string; path: string; title: string }) => (
+          <li class="relative">
+            <a
+              href={item.path}
+              class="effect-underline relative mx-4 uppercase hover:text-neutral-300 font-medium text-xl"
+              title={item.title}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>
+
+<!-- styles -->
+
+<style>
+  .scroll-navbar {
+    background-color: #262626; /* neutral-800 de tailwind */
+  }
+  a.effect-underline:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition:
+      opacity 0.35s,
+      -webkit-transform 0.35s;
+    transition:
+      opacity 0.35s,
+      transform 0.35s;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+  }
+
+  a.effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .translatex10 {
+    transform: translateX(2.5rem);
+  }
+
+  .translatex0 {
+    transform: translateX(0);
+    width: 3rem;
+  }
+
+  .rotate45 {
+    transform: rotate(45deg);
+  }
+  .rotate-45 {
+    transform: rotate(-45deg);
+  }
+</style>
+
+<!-- script -->
+
+<script>
+  /* ELEMENTS HTML */
+  const menuButton = document.getElementById("menuButton");
+  const menuSM = document.getElementById("menuSM");
+  const line1 = document.getElementById("line1");
+  const line2 = document.getElementById("line2");
+  const line3 = document.getElementById("line3");
+  const line4 = document.getElementById("line4");
+  const line5 = document.getElementById("line5");
+  const contentLines = document.getElementById("contentLines");
+  const navbar = document.querySelector("#navbar");
+  const menuItems = document.querySelectorAll(".menu-item");
+  const ubicationLink = document.getElementById("ubicationLink");
+
+  /* MENU SCROLL ANIMATION */
+  window.addEventListener("scroll", () => {
+    navbar?.classList.toggle("scroll-navbar", window.scrollY > 0);
+  });
+
+  /* CLICK MENU ANIMATIONS */
+  menuButton?.addEventListener("click", () => {
+    menuSM?.classList.toggle("show");
+    line1?.classList.toggle("translatex10");
+    line2?.classList.toggle("translatex10");
+    line3?.classList.toggle("translatex10");
+    contentLines?.classList.toggle("translatex0");
+    line4?.classList.toggle("rotate45");
+    line5?.classList.toggle("rotate-45");
+    if (!navbar?.classList.contains("scroll-navbar")) {
+      navbar?.classList.add("scroll-navbar");
+    } else if (window.scrollY <= 0) {
+      navbar?.classList.remove("scroll-navbar");
+    }
+  });
+
+  // CLOSE FUNCTION IN LINKS
+  menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      menuSM?.classList.remove("show");
+    });
+  });
+
+  ubicationLink?.addEventListener("click", () => {
+    if (menuSM?.classList.contains("show")) {
+      menuSM?.classList.remove("show");
+      line1?.classList.remove("translatex10");
+      line2?.classList.remove("translatex10");
+      line3?.classList.remove("translatex10");
+      contentLines?.classList.remove("translatex0");
+      line4?.classList.remove("rotate45");
+      line5?.classList.remove("rotate-45");
+    }
+  });
+</script>

@@ -15,7 +15,11 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.2",
+    "@fontsource-variable/dm-sans": "^5.1.0",
+    "@fontsource-variable/exo-2": "^5.1.0",
     "@fontsource-variable/roboto-flex": "^5.1.0",
+    "@fontsource/anton": "^5.1.0",
+    "@fontsource/cookie": "^5.1.0",
     "@fontsource/roboto": "^5.1.0",
     "@vite-pwa/astro": "^0.4.3",
     "astro": "^4.16.2",
