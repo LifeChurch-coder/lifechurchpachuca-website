@@ -2,10 +2,6 @@
 import Menu from "@/components/Menu.astro";
 import "@fontsource-variable/dm-sans";
 
-interface Props {
-  title: string;
-}
-
 const { title } = Astro.props;
 ---
 
@@ -15,7 +11,7 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Bienvenidos a Life Church, una comunidad cristiana en Pachuca, Hidalgo. Únete a nosotros para adorar, aprender y crecer en la fe. Ofrecemos servicios, grupos de estudio bíblico y actividades para todas las edades. ¡Te esperamos! "
+      content="Bienvenidos a Life Church, una comunidad cristiana en Pachuca, Hidalgo. Únete a nosotros para adorar, aprender y crecer en la fe. Ofrecemos servicios, grupos de estudio bíblico y actividades para todas las edades. ¡Te esperamos!"
     />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicons/logo_blak.png" />
@@ -26,8 +22,6 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-
-<!-- styles -->
 
 <style is:global>
   html {

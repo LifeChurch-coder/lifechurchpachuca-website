@@ -13,8 +13,8 @@ const { pathImage, minHeight, href, ...props } = Astro.props;
 ---
 
 <a
-  class={`w-full flex flex-col rounded-3xl min-h-[${minHeight}] bg-cover bg-center overflow-hidden `}
-  style={`background-image: url(${pathImage})`}
+  class="w-full flex flex-col rounded-3xl bg-cover bg-center overflow-hidden"
+  style={`min-height: ${minHeight}; background-image: url(${pathImage});`}
   href={href}
   {...props}
 >
